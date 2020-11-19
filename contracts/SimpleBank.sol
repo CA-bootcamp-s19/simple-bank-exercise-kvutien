@@ -1,9 +1,9 @@
+// SPDX-License-Identifier: MIT 
 /*
     This exercise has been updated to use Solidity version 0.6.12
     Breaking changes from 0.5 to 0.6 can be found here: 
     https://solidity.readthedocs.io/en/v0.6.12/060-breaking-changes.html
 */
-// SPDX-License-Identifier: MIT 
 pragma solidity ^0.6.12;
 
 // author: Vu Tien Khang
@@ -62,7 +62,7 @@ contract SimpleBank {
     // allows function to run locally/off blockchain
     function getBalance() public view returns (uint) {
         /* Get the balance of the sender of this transaction */
-        return msg.sender.balance;
+        return balances[msg.sender];
     }
 
     /// @notice Enroll a customer with the bank
